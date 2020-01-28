@@ -18,6 +18,22 @@ export default class Index extends React.Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  sendMail = e => {
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+    const subject = 'ブログからお問い合わせが来ました。';
+    let msg = 'お名前： ' + name.value + ' \n';
+    msg += 'メールアドレス： ' + email.value + ' \n';
+    msg += 'メッセージ： ' + message.value + ' \n';
+    fetch('https://us-central1-jnishime-blog.cloudfunctions.net/sendMail?subject=' + subject + '&msg=' + msg , {
+      method: 'GET',
+      headers: { 'Content-Type': 'text/plain' },
+    })
+      .then(() => navigate( alert('Send Mail!') ))
+      .catch(error => alert(error))
+  }
+
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -101,7 +117,7 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
+                  <button className="button is-link" type="submit" onClick={this.sendMail}>
                     Send
                   </button>
                 </div>

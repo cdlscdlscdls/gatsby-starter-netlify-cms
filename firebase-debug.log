@@ -1,0 +1,13 @@
+[debug] [2020-01-27T14:26:11.923Z] ----------------------------------------------------------------------
+[debug] [2020-01-27T14:26:11.925Z] Command:       /Users/jnishime/.nodebrew/node/v10.10.0/bin/node /Users/jnishime/.nodebrew/current/bin/firebase deploy
+[debug] [2020-01-27T14:26:11.925Z] CLI Version:   7.12.1
+[debug] [2020-01-27T14:26:11.925Z] Platform:      darwin
+[debug] [2020-01-27T14:26:11.925Z] Node Version:  v10.10.0
+[debug] [2020-01-27T14:26:11.925Z] Time:          Mon Jan 27 2020 23:26:11 GMT+0900 (GMT+09:00)
+[debug] [2020-01-27T14:26:11.926Z] ----------------------------------------------------------------------
+[debug] [2020-01-27T14:26:11.926Z] 
+[debug] [2020-01-27T14:26:11.932Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-27T14:26:11.933Z] > authorizing via signed-in user
+[debug] [2020-01-27T14:26:11.933Z] [iam] checking project jnishime-blog for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-01-27T14:26:11.934Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/jnishime-blog:testIamPermissions  
+
